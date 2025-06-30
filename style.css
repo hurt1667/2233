@@ -1,0 +1,88 @@
+
+body {
+  margin: 0;
+  font-family: "Microsoft YaHei", sans-serif;
+  background: linear-gradient(to top, #f9f9f9, #fffdfd);
+  overflow-x: hidden;
+}
+
+.container {
+  max-width: 480px;
+  margin: 0 auto;
+  padding: 30px 20px;
+  text-align: center;
+}
+
+.title {
+  font-size: 1.8em;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.avatar-box, .qr-box {
+  margin-bottom: 25px;
+  cursor: zoom-in;
+}
+
+.avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.qr {
+  width: 80%;
+  max-width: 300px;
+  border-radius: 16px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease;
+}
+
+.avatar:hover, .qr:hover {
+  transform: scale(1.05);
+}
+
+.caption {
+  font-size: 0.95em;
+  color: #666;
+  margin-top: 8px;
+}
+
+.heart-box {
+  margin-top: 40px;
+  animation: fadeInZoom 2.5s ease-out forwards;
+}
+
+.heart {
+  font-size: 48px;
+  opacity: 0;
+  transform: scale(0.3);
+  animation: popHeart 3s ease forwards 1s;
+}
+
+@keyframes popHeart {
+  0% { opacity: 0; transform: scale(0.3); }
+  60% { opacity: 1; transform: scale(1.2); }
+  100% { transform: scale(1); }
+}
+
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,0,0.85);
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.overlay img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 20px;
+}

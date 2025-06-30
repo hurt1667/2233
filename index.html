@@ -1,0 +1,36 @@
+
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <title>魔术加好友 🎩</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="container">
+    <h1 class="title">🎩 加我微信，见证魔术</h1>
+
+    <div class="avatar-box" onclick="zoomImage('avatar.jpg')">
+      <img src="avatar.jpg" alt="头像" class="avatar" />
+      <p class="caption">点我头像看看魔术</p>
+    </div>
+
+    <div class="qr-box" onclick="zoomImage('weixin-qr.jpg')">
+      <img src="weixin-qr.jpg" alt="微信二维码" class="qr" />
+      <p class="caption">长按识别二维码加好友</p>
+    </div>
+
+    <div class="heart-box">
+      <div class="heart">❤️</div>
+    </div>
+  </div>
+
+  <div class="overlay" id="overlay" onclick="closeZoom()">
+    <img id="zoomed-img" src="" />
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
